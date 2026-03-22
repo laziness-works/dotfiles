@@ -13,11 +13,11 @@ install_app() {
     eval "$INSTALL_SCRIPT"
     local EXIT_CODE=$?
     if [[ $EXIT_CODE -eq 0 ]];then
-      echo "│ ✅ Installation successful!"
       if [[ -n $POST_INSTALL_SCRIPT ]];then
         echo "│ ⚙️ Running post-install steps...: $POST_INSTALL_SCRIPT"
         eval "$POST_INSTALL_SCRIPT"
       fi
+      echo "│ ✅ Installation successful!"
     else
       echo "│ ❌ Installation failed with exit code $EXIT_CODE"
       exit 1
@@ -29,9 +29,11 @@ install_app() {
 }
 
 brew_post_install_script() {
-  echo >> "$HOME/.zprofile"
-  echo "# Homebrew"
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> "$HOME/.zprofile"
+  {
+    echo ""
+    echo "# Homebrew"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"'
+  } >> "$HOME/.zprofile"
   eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 }
 install_app brew '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' 'brew_post_install_script'
