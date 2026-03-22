@@ -14,4 +14,3 @@ Open your terminal and run the following command:
 
 - Homebrew (with automatic PATH configuration)
 - Rosetta 2
-- Docker Desktop (via Homebrew Cask)
