@@ -39,3 +39,5 @@ brew_post_install_script() {
 install_app brew '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' 'brew_post_install_script'
 
 install_app rosetta 'softwareupdate --install-rosetta --agree-to-license'
+
+install_app docker 'brew install --cask docker'
