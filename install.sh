@@ -13,6 +13,7 @@ install_app() {
     eval "$INSTALL_SCRIPT"
     local EXIT_CODE=$?
     if [[ $EXIT_CODE -eq 0 ]];then
+      source /etc/zprofile
       if [[ -n $POST_INSTALL_SCRIPT ]];then
         echo "│ ⚙️ Running post-install steps...: $POST_INSTALL_SCRIPT"
         eval "$POST_INSTALL_SCRIPT"
