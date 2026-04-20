@@ -52,3 +52,5 @@ install_app google-chrome 'brew install --cask google-chrome'
 install_app docker 'brew install --cask docker'
 
 install_app visual-studio-code 'brew install --cask visual-studio-code'
+
+install_app slack 'brew install --cask slack'

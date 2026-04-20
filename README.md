@@ -17,3 +17,4 @@ Open your terminal and run the following command:
 - Google Chrome (via Homebrew Cask)
 - Docker Desktop (via Homebrew Cask)
 - Visual Studio Code (via Homebrew Cask)
+- Slack (via Homebrew Cask)
