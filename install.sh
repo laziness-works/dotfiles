@@ -47,4 +47,6 @@ install_app brew '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/H
 
 install_app rosetta 'softwareupdate --install-rosetta --agree-to-license'
 
+install_app google-chrome 'brew install --cask google-chrome'
+
 install_app docker 'brew install --cask docker'

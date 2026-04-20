@@ -14,4 +14,5 @@ Open your terminal and run the following command:
 
 - Homebrew (with automatic PATH configuration)
 - Rosetta 2
+- Google Chrome (via Homebrew Cask)
 - Docker Desktop (via Homebrew Cask)
