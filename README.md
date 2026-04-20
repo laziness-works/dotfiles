@@ -16,3 +16,4 @@ Open your terminal and run the following command:
 - Rosetta 2
 - Google Chrome (via Homebrew Cask)
 - Docker Desktop (via Homebrew Cask)
+- Visual Studio Code (via Homebrew Cask)
