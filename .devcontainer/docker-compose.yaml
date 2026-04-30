@@ -1,0 +1,22 @@
+services:
+  proxy:
+    build: ./proxy
+    networks:
+      - internal_net
+      - external_net
+    ports:
+      - 3128:3128
+
+  workspace:
+    build: ./workspace
+    tty: true
+    networks:
+      - internal_net
+    environment:
+      - https_proxy=http://proxy:3128
+
+networks:
+  internal_net:
+    internal: true
+  external_net:
+    driver: bridge
