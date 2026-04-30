@@ -1,0 +1,4 @@
+services:
+  workspace:
+    build: ./workspace
+    tty: true
